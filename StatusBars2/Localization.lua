@@ -172,9 +172,9 @@ if (GetLocale() == "zhCN") then
 
 L["StatusBars2 Config"] = "StatusBars2 设置"
 
-L["Scale"] = "缩放"
-L["Opacity"] = "透明"
-L["Bar Select"] = "条形选择"
+L["Scale"] = "缩放值"
+L["Opacity"] = "不透明"
+L["Bar Select"] = "当前条形"
 
 L["Global Options"] = "全局选项"
 L["Fade bars in and out"] = "淡入淡出条形"
@@ -185,11 +185,12 @@ L["Thousand Separators Only"] = "千位分隔"
 L["Unformatted"] = "未格式化"
 L["Snap All Bars To Groups"] = "对齐所有条形位置"
 L["Reset All Group Positions"] = "重置所有群组位置"
+L["Text Display Options"] = "文字显示"
+L["Text Size"] = "文字大小"
 
 L["Group Options"] = "群组选项"
 
--- L["Auto-layout order"] = ""
--- L["Available"] = ""
+L["Available"] = "可用"
 
 L["Bar Options"] = "条形选项"
 L["Huge"] = "特大"
@@ -198,7 +199,7 @@ L["Medium"] = "中"
 L["Small"] = "小"
 L["Color"] = "颜色"
 L["Set Color"] = "设置颜色"
-L["Layout Options"] = "布局选项"
+L["Layout Options"] = "布局"
 L["Automatic"] = "自动"
 L["Locked To Group"] = "相对群组锁定"
 L["Locked To Background"] = "相对背景锁定"
@@ -208,6 +209,7 @@ L["Combat"] = "战斗"
 L["Always"] = "总是"
 L["Never"] = "永不"
 L["Only show auras listed"] = "仅列表中的光环"
+L["Auto-layout order"] = "布局排序"
 L["Add Entry"] = "添加光环"
 L["Delete Entry"] = "删除光环"
 L["Clear"] = "清除光环"
@@ -221,11 +223,12 @@ L["Right"] = "右"
 L["Hidden"] = "隐藏"
 L["Show Buffs"] = "显示增益"
 L["Show Debuffs"] = "显示减益"
--- L["Show in all forms"] = ""
+L["Show in all forms"] = "所有形态显示" -- 德鲁伊
 L["Show target spell"] = "显示目标施法"
+
 -- L["STRING_ID_CONFIG_AURA_FILTER_ENTRY_HELP_TEXT"] = ""
 -- L["STRING_ID_CONFIG_AURA_FILTER_LIST_HELP_TEXT"] = ""
--- L["STRING_ID_CONFIG_COPY_SETTINGS_TEXT"] = ""
+
 -- L["STRING_ID_CONFIG_LOCK_BARS_DURING_PLAY_HELP_TEXT"] = ""
 -- L["STRING_ID_INTERFACEPANEL_CREDITS_TEXT_1"] = ""
 -- L["STRING_ID_INTERFACEPANEL_CREDITS_TEXT_2"] = ""
@@ -237,9 +240,9 @@ L["STRING_ID_INTERFACEPANEL_HELP_TEXT_1"] = "在聊天框中输入\"/statusbars2
 L["STRING_ID_INTERFACEPANEL_HELP_TEXT_2"] = "输入\"/statusbars2 config\"或者\"/sb2 config\"或者点击下面的按钮开启配置模式。" -- Needs review
 -- L["STRING_ID_INTERFACEPANEL_TRANSLATORS_NEEDED"] = ""
 -- L["STRING_ID_MOVE_BAR_HELP_TEXT"] = ""
-L["Text Display Options"] = "文字显示"
-L["Text Size"] = "文字大小"
 
+L["Profiles"] = "档案存储"
+L["STRING_ID_CONFIG_COPY_SETTINGS_TEXT"] = "选择一个角色来复制档案"
 end
 
 ------------------------------------------------------

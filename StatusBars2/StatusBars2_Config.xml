@@ -73,7 +73,7 @@
 						</Anchor>
 					</Anchors>
 				</Texture>
-				<FontString name="$parentHeaderText" inherits="GameFontNormal" text="StatusBars2 Config">
+				<FontString name="$parentHeaderText" parentKey="sb2Label" inherits="GameFontNormal" text="StatusBars2 Config">
 					<Anchors>
 						<Anchor point="TOP" relativeTo="$parentHeader">
 							<Offset>
@@ -84,6 +84,11 @@
 				</FontString>
 			</Layer>
 		</Layers>
+        <Scripts>
+            <OnLoad>
+                StatusBars2_SetupFontString( self.sb2Label, "StatusBars2 Config" );
+            </OnLoad>
+        </Scripts>
     </Frame>
 
     <Frame name="StatusBars2_ConfigTabFrameTemplate" virtual="true">
@@ -354,7 +359,7 @@
     <Frame name="StatusBars2_LayoutConfigTemplate" inherits="StatusBars2_ConfigTabFrameTemplate" virtual="true" >
         <Layers>
 			<Layer level="BACKGROUND">
-                <FontString name="$parent_AlphaSliderLabel" inherits="GameFontNormalSmallLeft" text="Opacity">
+                <FontString name="$parent_AlphaSliderLabel" parentKey="alphaLabel" inherits="GameFontNormalSmallLeft" text="Opacity">
                     <Size x="64" y="14"/>
                     <Anchors>
                         <Anchor point="BOTTOMLEFT" >
@@ -362,7 +367,7 @@
                         </Anchor>
                     </Anchors>
                 </FontString>
-                <FontString name="$parent_ScaleSliderLabel" inherits="GameFontNormalSmallLeft" text="Scale">
+                <FontString name="$parent_ScaleSliderLabel" parentKey="scaleLabel" inherits="GameFontNormalSmallLeft" text="Scale">
                     <Size x="64" y="14"/>
                     <Anchors>
                         <Anchor point="BOTTOMLEFT" relativeTo="$parent_AlphaSliderLabel" relativePoint="TOPLEFT">
@@ -433,6 +438,12 @@
                 </Scripts>
             </Slider>
         </Frames>
+        <Scripts>
+            <OnLoad>
+                StatusBars2_SetupFontString( self.scaleLabel, "Scale" );
+                StatusBars2_SetupFontString( self.alphaLabel, "Opacity" );
+            </OnLoad>
+        </Scripts>
     </Frame>
 
     <!-- Global addon settings -->
@@ -530,6 +541,9 @@
                     </Anchor>
                 </Anchors>
                 <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Reset All Group Positions" ));
+                    </OnLoad>
                     <OnClick>
                         PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON);
                         StatusBars2_Options_ResetGroupPositionButton_OnClick( self );
@@ -544,6 +558,9 @@
                     </Anchor>
                 </Anchors>
                 <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Snap All Bars To Groups" ));
+                    </OnLoad>
                     <OnClick>
                         PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON);
                         StatusBars2_Options_ResetBarPositionButton_OnClick( self );
@@ -675,7 +692,7 @@
                 </Anchors>
                 <Layers>
                     <Layer level="BACKGROUND">
-                        <FontString name="$parent_Label" inherits="GameFontNormal" text="Auto-layout order" >
+                        <FontString name="$parent_Label" parentKey="autolayoutLabel" inherits="GameFontNormal" text="Auto-layout order" >
                             <Anchors>
                                 <Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
                                     <Offset>
@@ -696,6 +713,7 @@
                         HybridScrollFrame_OnLoad(self);
                         self.update = StatusBars2_GroupOptions_AutoLayoutListUpdate;
                         HybridScrollFrame_CreateButtons(self, "StatusBars2_AutoLayoutListEntryButtonTemplate");
+                        StatusBars2_SetupFontString( self.autolayoutLabel, "Auto-layout order" );
                     </OnLoad>
                     <OnShow>
                         StatusBars2_GroupOptions_AutoLayoutListUpdate( self );    
@@ -752,7 +770,7 @@
     <Frame name="StatusBars2_BarConfigTemplate" inherits="StatusBars2_LayoutConfigTemplate" virtual="true" >
 		<Layers>
 			<Layer level="BACKGROUND">
-                <FontString name="$parent_LayoutLabel" inherits="GameFontNormalSmallLeft" text="Layout Options" >
+                <FontString name="$parent_LayoutLabel" parentKey="layoutLabel" inherits="GameFontNormalSmallLeft" text="Layout Options" >
                     <Size x="64" y="20"/>
                     <Anchors>
                         <Anchor point="TOPLEFT" relativeTo="$Parent" >
@@ -762,7 +780,7 @@
                         </Anchor>
                     </Anchors>
                 </FontString>
-                <FontString name="$parent_EnabledLabel" inherits="GameFontNormalSmallLeft" text="Enabled" >
+                <FontString name="$parent_EnabledLabel" parentKey="enabledLabel" inherits="GameFontNormalSmallLeft" text="Enabled" >
                     <Size x="64" y="20"/>
                     <Anchors>
                         <Anchor point="TOPLEFT" relativeTo="$parent_LayoutLabel" relativePoint="BOTTOMLEFT">
@@ -771,11 +789,6 @@
                             </Offset>
                         </Anchor>
                     </Anchors>
-                    <Scripts>
-                        <OnLoad>
-                            getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Enabled" ));
-                        </OnLoad>
-                    </Scripts>
                 </FontString>
             </Layer>
         </Layers>
@@ -811,6 +824,12 @@
                 </Scripts>
             </Frame>
         </Frames>
+        <Scripts>
+            <OnLoad>
+                StatusBars2_SetupFontString( self.enabledLabel, "Enabled" );
+                StatusBars2_SetupFontString( self.layoutLabel, "Layout Options" );
+            </OnLoad>
+        </Scripts>
     </Frame>
 
     <!-- Continuous Bar configuration frame template -->
@@ -1001,6 +1020,9 @@
                     </Anchor>
                 </Anchors>
                 <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Add Entry" ));
+                    </OnLoad>
                     <OnClick>
                         PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON);
                         StatusBars2_BarOptions_AddAuraFilterEntry( self:GetParent( ).auraNameInput );
@@ -1015,6 +1037,9 @@
                     </Anchor>
                 </Anchors>
                 <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Clear" ));
+                    </OnLoad>
                     <OnClick>
                         PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON);
                         StatusBars2_BarOptions_ClearAuraFilterList_OnClick( self );
@@ -1029,6 +1054,9 @@
                     </Anchor>
                 </Anchors>
                 <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Delete Entry" ));
+                    </OnLoad>
                     <OnClick>
                         PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON);
                         StatusBars2_BarOptions_DeleteAuraFilterListEntry_OnClick( self );
@@ -1185,6 +1213,9 @@
                     </Anchor>
                 </Anchors>
                 <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Set Color" ));
+                    </OnLoad>
                     <OnClick>
                         PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON);
                         StatusBars2_Options_SetBarColorButton_OnClick( self:GetParent( ) );
@@ -1238,7 +1269,7 @@
 		</Anchors>
 		<Layers>
 			<Layer level="ARTWORK">
-                <FontString name="$parent_BarSelectLabel" inherits="GameFontNormalSmallLeft" text="Bar Select" justifyH="RIGHT" >
+                <FontString name="$parent_BarSelectLabel" parentKey="barLabel" inherits="GameFontNormalSmallLeft" text="Bar Select" justifyH="RIGHT" >
                     <Size x="70" y="25"/>
                 </FontString>
 			</Layer>
@@ -1383,6 +1414,11 @@
                         </Offset>
                     </Anchor>
                 </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Global Options" ));
+                    </OnLoad>
+                </Scripts>
             </Button>
             <Button name="$parentTab2" inherits="StatusBars2_ConfigTabButtonTemplate" id="2" text="Group Options">
                 <Anchors>
@@ -1392,6 +1428,11 @@
                         </Offset>
                     </Anchor>
                 </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Group Options" ));
+                    </OnLoad>
+                </Scripts>
             </Button>
             <Button name="$parentTab3" inherits="StatusBars2_ConfigTabButtonTemplate" id="3" text="Bar Options">
                 <Anchors>
@@ -1401,6 +1442,11 @@
                         </Offset>
                     </Anchor>
                 </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Bar Options" ));
+                    </OnLoad>
+                </Scripts>
             </Button>
             <Button name="$parentTab4" inherits="StatusBars2_ConfigTabButtonTemplate" id="4" text="Profiles">
                 <Anchors>
@@ -1410,6 +1456,11 @@
                         </Offset>
                     </Anchor>
                 </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Profiles" ));
+                    </OnLoad>
+                </Scripts>
             </Button>
         </Frames>
         <Scripts>
@@ -1418,6 +1469,7 @@
                 PanelTemplates_SetNumTabs(self, 4);
                 PanelTemplates_SetTab(self, 1);
                 StatusBars2Config_Configure_Bar_Options( self );
+                StatusBars2_SetupFontString( self.barLabel, "Bar Select" );
             </OnLoad>
             <OnShow>
                 PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN);
