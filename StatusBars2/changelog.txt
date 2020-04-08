@@ -1,4 +1,7 @@
-﻿3.08.08
+﻿4.00.00
+Fixed for classic WoW
+
+3.08.08
 Fixed holy power bar (another oops)
 
 3.08.07
