@@ -68,9 +68,9 @@ end
 
 local PercentTextInfo =
 {
-    { label = "Left",   value = "Left" },
-    { label = "Right",  value = "Right" },
-    { label = "Hidden",   value = "Hide" },
+    { label = L[ "Left" ],   value = "Left" },
+    { label = L[ "Right" ],  value = "Right" },
+    { label = L[ "Hidden" ], value = "Hide" },
 }
 for i, v in ipairs( PercentTextInfo ) do
     PercentTextInfo[v.value] = PercentTextInfo[i];
@@ -78,9 +78,9 @@ end
 
 local LayoutTypeInfo =
 {
-    { label = "Automatic", value = "AutoLayout" },
-    { label = "Locked To Group", value = "GroupLocked" },
-    { label = "Locked To Background", value = "Background" },
+    { label = L[ "Automatic" ], value = "AutoLayout" },
+    { label = L[ "Locked To Group" ], value = "GroupLocked" },
+    { label = L[ "Locked To Background" ], value = "Background" },
 }
 for i, v in ipairs( LayoutTypeInfo ) do
     LayoutTypeInfo[v.value] = LayoutTypeInfo[i];
@@ -446,7 +446,7 @@ local function StatusBars2Config_DoDataExchange( configPanel, save, bar )
         UIDropDownMenu_SetSelectedValue( textOptionsMenu, StatusBars2.textDisplayOption );
         UIDropDownMenu_SetText( textOptionsMenu, TextOptions[StatusBars2.textDisplayOption].label );
         UIDropDownMenu_SetSelectedValue( fontMenu, StatusBars2.font );
-        UIDropDownMenu_SetText( fontMenu, FontInfo[UIDropDownMenu_GetSelectedValue(fontMenu)].label );
+        UIDropDownMenu_SetText( fontMenu, StatusBars2_GetLocalizedText( FontInfo[UIDropDownMenu_GetSelectedValue(fontMenu)].label ) );
         fadeButton:SetChecked( StatusBars2.fade );
         lockedButton:SetChecked( StatusBars2.locked );
         scaleSlider.applyToFrame = StatusBars2;
@@ -844,7 +844,7 @@ function StatusBars2_FontMenu_Initialize( self )
         entry.func = StatusBars2_FontMenu_OnClick;
         entry.arg1 = self;
         entry.value = i;
-        entry.text = info.label;
+        entry.text = StatusBars2_GetLocalizedText( info.label );
         entry.checked = selected == entry.value;
         UIDropDownMenu_AddButton( entry );
     end

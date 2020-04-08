@@ -771,6 +771,11 @@
                             </Offset>
                         </Anchor>
                     </Anchors>
+                    <Scripts>
+                        <OnLoad>
+                            getglobal( self:GetName( ) .. "Text" ):SetText( StatusBars2_GetLocalizedText( "Enabled" ));
+                        </OnLoad>
+                    </Scripts>
                 </FontString>
             </Layer>
         </Layers>

@@ -177,9 +177,9 @@ L["Opacity"] = "透明"
 L["Bar Select"] = "条形选择"
 
 L["Global Options"] = "全局选项"
--- L["Fade bars in and out"] = ""
--- L["Lock bars during play"] = ""
--- L["Enable help tooltips"] = ""
+L["Fade bars in and out"] = "淡入淡出条形"
+L["Lock bars during play"] = "游戏锁定条形"
+L["Enable help tooltips"] = "启用帮助提示"
 L["Abbreviated"] = "缩写"
 L["Thousand Separators Only"] = "千位分隔"
 L["Unformatted"] = "未格式化"
@@ -190,7 +190,6 @@ L["Group Options"] = "群组选项"
 
 -- L["Auto-layout order"] = ""
 -- L["Available"] = ""
-
 
 L["Bar Options"] = "条形选项"
 L["Huge"] = "特大"
