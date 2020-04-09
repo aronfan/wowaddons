@@ -1,7 +1,7 @@
 ## Interface: 11304
 ## Version: 4.00.00
 ## Title: StatusBars2
-## Author: 龙哥
+## Title-zhCN: |cFF0099FF[StatusBars]|r 状态监控
 ## Notes: Movable status bars for health, power and a variety of class-ability-specific displays. /sb2 to configure
 ## Dependencies:
 ## OptionalDeps:
