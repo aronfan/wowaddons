@@ -1,0 +1,13 @@
+## Interface: 11304
+## Title: Dominos Progress
+## Title-zhCN: |cFF0099FF[Dominos]|r 进度条模块
+## Notes: Progress bars of all sorts
+## Author: Tuller
+## Dependencies: Dominos
+
+localization.xml
+config.lua
+main.lua
+progressBar.lua
+xpBar.lua
+reputationBar.lua
