@@ -1,0 +1,14 @@
+﻿## Interface: 11304
+## Version: 1.00.00
+## Title: Auto Equip
+## Title-zhCN: |cFF0099FF[Auto Equip]|r 一键换装
+## Title-zhTW: |cFF0099FF[Auto Equip]|r 一鍵換裝
+## Notes: Swap your suites with one click.
+## Notes-zhCN: 快速装备,更换或脱掉你身上的装备
+## Notes-zhTW: 快速裝備,更換或脫掉你身上的裝備
+## Dependencies: 
+## LoadOnDemand: 0
+## SavedVariablesPerCharacter: ExAE_Config
+
+Ex_AutoEquip.xml
+Ex_Naked.xml
