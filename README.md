@@ -3,7 +3,7 @@
 ## AddOns 插件
 AuctionMaster: 拍卖大师
 
-Combuctor: 背包/银行整合，离线数据库
+Combuctor: 背包/银行整合，离线数据库(BagBrother)
 
 Dominos: 动作条/进度条/施法条
 
