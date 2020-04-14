@@ -1,0 +1,19 @@
+## Interface: 11304
+## Title: AuctionMaster
+## Title-zhCN: |cFF0099FF[AuctionMaster]|r 拍卖大师
+## Notes: Auction house selling and statistic tool.
+## Author: Udorn
+## RequiredDeps:
+## SavedVariables: VendorDb, AuctionMasterMiscDb
+## DefaultState: enabled
+## Dependancies:
+## Version: 8.2.2
+## X-Category: Auction
+## X-Feedback: http://www.curse.com/addons/wow/vendor
+
+libs\Import.xml
+src\xml\Import.xml
+src\locale\Import.xml
+src\main\Import.xml
+src\api\Import.xml
+src\test\Import.xml
