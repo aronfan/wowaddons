@@ -1,0 +1,10 @@
+## Interface: 11304
+## Title: Combuctor
+## Title-zhCN: |cFF0099FF[Combuctor]|r 背包整合
+## Author: Tuller & Jaliborc (João Cardoso)
+## Notes: Single window displays for your inventory and bank
+## OptionalDeps: BagBrother, WoWUnit
+## SavedVariables: Combuctor_Sets
+## Version: 8.3.2
+
+addons\main\main.xml
