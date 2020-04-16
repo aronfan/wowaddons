@@ -9,6 +9,8 @@ Dominos: 动作条/进度条/施法条
 
 Ex_AutoEquip: 一键换装/一键脱装/一键穿装
 
+FasterLooting: 超快拾取
+
 felFruiTimer: 费伍德水果
 
 GearMenu: 装备条，可以按槽位来更换装备

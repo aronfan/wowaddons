@@ -1,0 +1,8 @@
+## Interface: 11304
+## Title: FasterLooting
+## Title-zhCN: |cFF0099FF[FasterLoot]]|r 超快拾取
+## Author: cannon
+## Notes: Auto loots all items without the delay currently in Classic
+## Notes-zhCN: 加速拾取过程，去除无意义的中间延时
+## Version: 1.1.2
+FasterLooting.lua
