@@ -17,6 +17,8 @@ NugRunning: 法术计时和条形展示
 
 Poisoner: 盗贼毒药助手，监控剩余时间和次数，方便涂毒制毒
 
+PowerSpark: 能量和法力恢复显示
+
 StatusBars2: 监控你的生命/能量/连击点，以及目标/焦点/宠物的生命/能量/BUFF
 
 ## Icons 反河蟹图标
