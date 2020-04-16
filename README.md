@@ -9,6 +9,8 @@ Dominos: 动作条/进度条/施法条
 
 Ex_AutoEquip: 一键换装/一键脱装/一键穿装
 
+felFruiTimer: 费伍德水果
+
 LetMeCast: 自动下马/站立以保证下次施法
 
 NugEnergy: 监控自身能量恢复
