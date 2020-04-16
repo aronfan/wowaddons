@@ -13,6 +13,8 @@ LetMeCast: 自动下马/站立以保证下次施法
 
 NugEnergy: 监控自身能量恢复
 
+NugRunning: 法术计时和条形展示
+
 Poisoner: 盗贼毒药助手，监控剩余时间和次数，方便涂毒制毒
 
 StatusBars2: 监控你的生命/能量/连击点，以及目标/焦点/宠物的生命/能量/BUFF

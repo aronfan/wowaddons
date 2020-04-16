@@ -1,0 +1,24 @@
+## Interface: 11304
+## Title: NugRunning
+## Title-zhCN: |cFF0099FF[NugRunning]|r 法术计时
+## Notes: Spelltimers
+## Notes-zhCN: 法术效果持续时间的计时
+## Author: d87
+## SavedVariablesPerCharacter: NRunDB_Char
+## SavedVariables: NRunDB_Global, NugRunningConfigCustom
+## Version: 1.13.38
+
+## X-WoWI-ID: 10440
+## X-Curse-Project-ID: 27470
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibSharedMedia-3.0\lib.xml
+
+helpers.lua
+classic.config.lua
+NugRunning.lua
+frame.lua
+special.lua
+totems.lua
+nameplates.lua
