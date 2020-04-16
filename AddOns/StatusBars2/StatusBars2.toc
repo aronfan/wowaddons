@@ -2,7 +2,7 @@
 ## Version: 4.00.00
 ## Title: StatusBars2
 ## Title-zhCN: |cFF0099FF[StatusBars]|r 状态监控
-## Title-zhTW: |cFF0099FF[Auto Equip]|r 狀態監控
+## Title-zhTW: |cFF0099FF[StatusBars]|r 狀態監控
 ## Notes: Movable status bars for health, power and a variety of class-ability-specific displays. /sb2 to configure
 ## Notes-zhCN: 监控你的血量/能量/连击点，以及目标的对应状态
 ## Notes-zhTW: 監控你的血量/能量/連擊點，以及目標的對應狀態

@@ -9,6 +9,8 @@ Dominos: 动作条/进度条/施法条
 
 Ex_AutoEquip: 一键换装/一键脱装/一键穿装
 
+LetMeCast: 自动下马/站立以保证下次施法
+
 NugEnergy: 监控自身能量恢复
 
 Poisoner: 盗贼毒药助手，监控剩余时间和次数，方便涂毒制毒
