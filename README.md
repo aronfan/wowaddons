@@ -21,10 +21,15 @@ PowerSpark: 能量和法力恢复显示
 
 StatusBars2: 监控你的生命/能量/连击点，以及目标/焦点/宠物的生命/能量/BUFF
 
+拷贝到Interface目录下即可
+
 ## Icons 反河蟹图标
 腐蚀术/死灵精华图标等等
 
+拷贝到Interface目录下即可
 
 ## 反河蟹代码
 
 SET overrideArchive "0"
+
+将这行代码黏贴到WTF目录下的Config.wtf文件中
