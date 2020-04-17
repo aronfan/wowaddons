@@ -1,0 +1,11 @@
+## Interface: 11304
+## Title: bloodOfHeros
+## Title-zhCN: |cFF0099FF[HeroBlood]|r 英雄之血
+## Title-zhTW: |cFF0099FF[HeroBlood]|r 英雄之血
+## Author: Demonass
+## Version: 1.2
+## DefaultState: Enabled
+## SavedVariables: bloodOfHerosDB
+Libs\main.xml
+
+bloodOfHeros.lua
