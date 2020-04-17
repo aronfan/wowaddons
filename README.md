@@ -5,6 +5,8 @@ AuctionMaster: 拍卖大师
 
 bloodOfHeros: 瘟疫之地英雄之血
 
+CharacterStatsClassic: 详细人物属性
+
 Combuctor: 背包/银行整合，离线数据库(BagBrother)
 
 CritSound: 爆击音效
