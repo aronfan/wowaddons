@@ -1,9 +1,9 @@
 ## Interface: 11304
 ## Title: PowerSpark
 ## Notes: PowerSpark
-## Title-zhCN: |cFF0099FF[PowerSpark]|r 能量法力恢复提示
+## Title-zhCN: |cFF0099FF[PowerSpark]|r 能量恢复提示
 ## Notes-zhCN: 能量和法力恢复提示
-## Title-zhTW: |cFF0099FF[PowerSpark]|r 能量法力恢復提示
+## Title-zhTW: |cFF0099FF[PowerSpark]|r 能量恢復提示
 ## Notes-zhTW: 能量和法力恢復提示
 ## LoadOnDemand: 0
 ## Version: 1.2.9

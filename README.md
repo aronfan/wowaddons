@@ -25,6 +25,8 @@ Poisoner: 盗贼毒药助手，监控剩余时间和次数，方便涂毒制毒
 
 PowerSpark: 能量和法力恢复显示
 
+Spy: 侦测敌方玩家
+
 StatusBars2: 监控你的生命/能量/连击点，以及目标/焦点/宠物的生命/能量/BUFF
 
 拷贝到Interface目录下即可
