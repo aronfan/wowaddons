@@ -1,0 +1,23 @@
+## Interface: 11304
+## Title: Raid Ledger
+## Title-zhCN: |cFF0099FF[RaidLedger]|r 金团账本
+## Title-zhTW: |cFF0099FF[RaidLedger]|r 金團賬本
+## Notes: A ledger for GDKP/gold run raid.
+## Notes-zhCN: 金团账本，帮你在金团中记账 反馈问题
+## Notes-zhTW: 金團賬本，幫你在金團中記賬 反饋問題
+## SavedVariablesPerCharacter: RaidLedgerDatabase
+## Author: Boshi Lian(farmer1992@gmail.com)
+## Version: v1.4.5
+
+lib\lib-st\Core.lua
+lib\LibDeformat-3.0\LibDeformat-3.0.lua
+
+locales.lua
+utils.lua
+event.lua
+
+db.lua
+options.lua
+gui.lua
+
+cli.lua
