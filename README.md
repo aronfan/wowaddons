@@ -29,6 +29,8 @@ NugRunning: 法术计时和条形展示
 
 Poisoner: 盗贼毒药助手，监控剩余时间和次数，方便涂毒制毒
 
+Postal_Classic: 邮箱助手
+
 PowerSpark: 能量和法力恢复显示
 
 Spy: 侦测敌方玩家
