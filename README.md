@@ -11,6 +11,8 @@ Combuctor: 背包/银行整合，离线数据库(BagBrother)
 
 CritSound: 爆击音效
 
+Details: 伤害/治疗统计，仇恨监控(TinyThreat)
+
 Dominos: 动作条/进度条/施法条
 
 Ex_AutoEquip: 一键换装/一键脱装/一键穿装
