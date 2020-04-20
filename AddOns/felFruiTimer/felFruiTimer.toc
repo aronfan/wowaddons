@@ -1,7 +1,7 @@
 ## Interface: 11304
 ## Title: felFruiTimer
-## Title-zhCN: |cFF0099FF[FelwoodFruit]|r 费伍德水果
-## Title-zhTW: |cFF0099FF[FelwoodFruit]|r 费伍德水果
+## Title-zhCN: |cFF0099FF[Gather]|r 费伍德水果
+## Title-zhTW: |cFF0099FF[Gather]|r 费伍德水果
 ## Author: Demonass
 ## Version: 1.2
 ## DefaultState: Enabled

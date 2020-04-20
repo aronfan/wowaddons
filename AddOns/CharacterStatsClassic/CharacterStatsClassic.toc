@@ -3,8 +3,8 @@
 ## Version: 3.4.1
 ## Title: CharacterStatsClassic
 ## Notes: Advanced Character Stats
-## Title-zhCN: |cFF0099FF[CharStats]|r 详细人物属性
-## Title-zhTW: |cFF0099FF[CharStats]|r 詳細人物屬性
+## Title-zhCN: |cFF0099FF[Base]|r 详细人物属性
+## Title-zhTW: |cFF0099FF[Base]|r 詳細人物屬性
 ## DefaultState:  enabled
 ## SavedVariables: CharacterStatsClassicDB
 ## SavedVariablesPerCharacter: CharacterStatsClassicCharacterDB

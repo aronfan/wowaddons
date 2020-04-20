@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: Dominos
-## Title-zhCN: |cFF0099FF[Dominos]|r 动作条模块
+## Title-zhCN: |cFF0099FF[Base]|r Dominos动作条
 ## Notes: A main actionbar replacement
 ## Author: Tuller
 ## Version: 8.3.1

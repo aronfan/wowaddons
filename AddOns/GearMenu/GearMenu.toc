@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: GearMenu
-## Title-zhCN: |cFF0099FF[GearMenu]|r 装备条
+## Title-zhCN: |cFF0099FF[Base]|r 装备条
 ## Author: Michael Wiesendanger <michael.wiesendanger@gmail.com>
 ## Notes: Addon to manage and keybind usable gear
 ## Notes-zhCN: 装备动作条，可更换对应槽位的装备

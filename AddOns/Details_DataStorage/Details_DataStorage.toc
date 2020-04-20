@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: Details!: Storage
-## Title-zhCN: |cFF0099FF[RAID Details]|r Details数据存储
+## Title-zhCN: |cFF0099FF[RAID]|r Details数据存储
 ## Notes: Stores information for Details! Damage Meter
 ## DefaultState: Enabled
 ## LoadOnDemand: 1

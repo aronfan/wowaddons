@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: Dominos Progress
-## Title-zhCN: |cFF0099FF[Dominos]|r 进度条模块
+## Title-zhCN: |cFF0099FF[Base]|r Dominos进度条
 ## Notes: Progress bars of all sorts
 ## Author: Tuller
 ## Dependencies: Dominos

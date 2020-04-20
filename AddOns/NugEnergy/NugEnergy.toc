@@ -4,7 +4,7 @@
 ## SavedVariables: NugEnergyDB
 ## SavedVariablesPerCharacter: NugEnergyDB_Character
 ## Version: 1.13.14
-## Title-zhCN: |cFF0099FF[NugEnergy]|r 能量恢复监控
+## Title-zhCN: |cFF0099FF[Combat]|r 能量恢复监控
 ## Notes-zhCN: 显示角色的当前能量恢复进度
 
 ## X-WoWI-ID: 9099

@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: BagBrother
-## Title-zhCN: |cFF0099FF[Combuctor]|r 离线背包数据库
+## Title-zhCN: |cFF0099FF[Base]|r 离线背包数据库
 ## Notes: Stores data about your characters inventory, bank, vault and guild bank, so that you may view them from anywhere.
 ## Author: Jaliborc (João Cardoso)
 ## SavedVariables: BrotherBags

@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: Combuctor Config
-## Title-zhCN: |cFF0099FF[Combuctor]|r 背包整合配置
+## Title-zhCN: |cFF0099FF[Base]|r 背包整合配置
 ## Author: Tuller and Jaliborc (João Cardoso)
 ## Notes: An options menu for Combuctor
 ## Dependencies: Combuctor

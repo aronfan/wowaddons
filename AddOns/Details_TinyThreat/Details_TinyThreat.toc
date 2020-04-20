@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: Details!: Tiny Threat (plugin)
-## Title-zhCN: |cFF0099FF[RAID Details]|r Details仇恨统计
+## Title-zhCN: |cFF0099FF[RAID]|r Details仇恨统计
 ## Notes: Threat meter plugin, show threat for group members in the window. Select it from the Plugin menu in the Orange Cogwheel.
 ## RequiredDeps: Details
 ## OptionalDeps: Ace3

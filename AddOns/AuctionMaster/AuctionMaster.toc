@@ -1,11 +1,11 @@
 ## Interface: 11304
 ## Title: AuctionMaster
-## Title-zhCN: |cFF0099FF[AuctionMaster]|r 拍卖大师
+## Title-zhCN: |cFF0099FF[Base]|r 拍卖大师
 ## Notes: Auction house selling and statistic tool.
 ## Author: Udorn
 ## RequiredDeps:
 ## SavedVariables: VendorDb, AuctionMasterMiscDb
-## DefaultState: enabled
+## DefaultState: Enabled
 ## Dependancies:
 ## Version: 8.2.2
 ## X-Category: Auction

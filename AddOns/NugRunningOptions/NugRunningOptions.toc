@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: NugRunningOptions
-## Title-zhCN: |cFF0099FF[NugRunning]|r 法术计时设置
+## Title-zhCN: |cFF0099FF[Combat]|r 法术计时设置
 ## Notes: Options for NugRunning
 ## Author: d87
 ## RequiredDeps: NugRunning
