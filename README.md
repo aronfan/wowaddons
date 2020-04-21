@@ -48,6 +48,12 @@ StatusBars2: 监控你的生命/能量/连击点，以及目标/焦点/宠物的
 
 拷贝到Interface目录下即可
 
+## TargetingFrame 目标框体美化
+拷贝到Interface目录下即可
+
+## Tooltips 提示框美化
+拷贝到Interface目录下即可
+
 ## 反河蟹代码
 
 SET overrideArchive "0"
