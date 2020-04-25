@@ -15,6 +15,8 @@ Details: 伤害/治疗统计，仇恨监控(TinyThreat)
 
 Dominos: 动作条/进度条/施法条
 
+EasyFrames: 头像框体
+
 Ex_AutoEquip: 一键换装/一键脱装/一键穿装
 
 FasterLooting: 超快拾取
