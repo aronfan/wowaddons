@@ -39,6 +39,8 @@ Postal_Classic: 邮箱助手
 
 PowerSpark: 能量和法力恢复显示
 
+Questie: 任务导引，任务数据库
+
 RaidLedger: 金团账本
 
 Spy: 侦测敌方玩家
