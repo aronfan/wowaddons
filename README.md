@@ -1,6 +1,8 @@
 # 魔兽世界 经典怀旧服
 
 ## AddOns 插件
+AtlasLoot: 掉落/奖励/制造查询
+
 AuctionMaster: 拍卖大师
 
 bloodOfHeros: 瘟疫之地英雄之血
