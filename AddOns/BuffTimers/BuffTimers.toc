@@ -1,0 +1,10 @@
+## Interface: 11304
+## Title: BuffTimers
+## Title-zhCN: |cFF0099FF[Base]|r Buff时间精确显示
+## Author: mdhippie
+## Notes: v1.0.0 -- Show full buff times
+## Version: 1.0.0
+## DefaultState: enabled
+## SavedVariables: BuffTimersOptions
+
+BuffTimers.lua
