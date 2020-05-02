@@ -31,6 +31,8 @@ GearMenu: 装备条，可以按槽位来更换装备
 
 LetMeCast: 自动下马/站立以保证下次施法
 
+NovaWorldBuffs: 世界Buff监控
+
 NugCast: 自身和目标施法条
 
 NugEnergy: 监控自身能量恢复
