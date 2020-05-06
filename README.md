@@ -35,8 +35,6 @@ NovaWorldBuffs: 世界Buff监控
 
 NugCast: 自身和目标施法条
 
-NugEnergy: 监控自身能量恢复
-
 NugRunning: 法术计时和条形展示
 
 Poisoner: 盗贼毒药助手，监控剩余时间和次数，方便涂毒制毒
