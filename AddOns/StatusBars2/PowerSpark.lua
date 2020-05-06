@@ -44,7 +44,7 @@ end)
 function PowerSparkFrame:init(power, last)
 	if power.bar then return end
 	power.bar = CreateFrame('Statusbar', power.name, power.parent)
-	power.bar:SetWidth(136)
+	power.bar:SetWidth(134)
 	power.bar:SetHeight(1)
 	power.bar:SetPoint('CENTER')
 	power.spark = power.bar:CreateTexture(nil, 'OVERLAY')
