@@ -1,0 +1,11 @@
+## Interface: 11304
+## Title: LetMeRoll
+## Notes: Roll with number
+## Title-zhCN: |cFF0099FF[Base]|R ROLL点鬼才
+## Notes-zhCN: ROLL点鬼才
+## Title-zhTW: |cFF0099FF[Base]|R ROLL點鬼才
+## Notes-zhTW: ROLL點鬼才
+## Author: aron
+## Version: 1.0
+
+LetMeRoll.lua
