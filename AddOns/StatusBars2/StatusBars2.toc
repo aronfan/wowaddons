@@ -29,4 +29,3 @@ StatusBars2_Config.lua
 StatusBars2_Util.lua
 StatusBars2.xml
 StatusBars2_Config.xml
-StatusBars2_PowerSpark.lua

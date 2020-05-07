@@ -1,0 +1,16 @@
+## Interface: 11304
+## Version: v80000-1.0.0
+## Title: WowLua
+## Title-zhCN: |cFF0099FF[Base]|r 插件开发 
+## Author: Cladhaire
+## Notes: Interactive Lua interpreter and scratchpad
+## LoadManagers: AddonLoader
+## X-LoadOn-Slash: /wowlua, /lua, /wowluarun, /luarun
+## SavedVariables: WowLua_DB
+
+Localization.enUS.lua
+
+WowLua.lua
+FAIAP.lua
+WowLua.xml
+WowLua_Config.lua

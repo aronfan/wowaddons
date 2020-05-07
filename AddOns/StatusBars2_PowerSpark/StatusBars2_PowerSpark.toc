@@ -1,0 +1,8 @@
+## Interface: 11304
+## Title: StatusBars2 PowerSpark
+## Title-zhCN: |cFF0099FF[Combat]|r 状态监控 能量和法力
+## Notes: StatusBars2_PowerSpark
+## Version: 1.0.0
+## Dependencies: StatusBars2
+
+StatusBars2_PowerSpark.lua

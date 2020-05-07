@@ -43,10 +43,10 @@ end)
 
 function PowerSparkFrame:init(power, last)
 	if power.bar then return end
-	power.bar = CreateFrame('Statusbar', power.name, power.parent)
-	--power.bar:SetWidth(power.parent:GetWidth())
-	power.bar:SetWidth(125)
-	power.bar:SetHeight(1)
+	local status = _G["StatusBars2_playerPowerBar"]
+	power.bar = CreateFrame('Statusbar', power.name, status)
+	power.bar:SetWidth(status:GetWidth())
+	power.bar:SetHeight(32)
 	power.bar:SetPoint('CENTER')
 	power.spark = power.bar:CreateTexture(nil, 'OVERLAY')
 	power.spark:SetTexture('Interface\\CastingBar\\UI-CastingBar-Spark')
