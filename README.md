@@ -9,6 +9,8 @@ bloodOfHeros: 瘟疫之地英雄之血
 
 BuffTimers: Buff时间精确显示
 
+BugGrabber: Bug收集器
+
 CharacterStatsClassic: 详细人物属性
 
 Combuctor: 背包/银行整合，离线数据库(BagBrother)
@@ -50,6 +52,8 @@ RaidLedger: 金团账本
 Spy: 侦测敌方玩家
 
 StatusBars2: 监控你的生命/能量/连击点，以及目标/焦点/宠物的生命/能量/BUFF
+
+WowLua: 游戏内置Lua解释器
 
 拷贝到Interface目录下即可
 
