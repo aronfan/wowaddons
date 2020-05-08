@@ -11,6 +11,8 @@ BuffTimers: Buff时间精确显示
 
 BugGrabber: Bug收集器
 
+BugSack: Bug展示器
+
 CharacterStatsClassic: 详细人物属性
 
 Combuctor: 背包/银行整合，离线数据库(BagBrother)
