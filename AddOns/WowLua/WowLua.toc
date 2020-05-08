@@ -1,7 +1,7 @@
 ## Interface: 11304
 ## Version: v80000-1.0.0
 ## Title: WowLua
-## Title-zhCN: |cFF0099FF[Base]|r 插件开发 
+## Title-zhCN: |cFF0099FF[!Meta]|r 插件开发 
 ## Author: Cladhaire
 ## Notes: Interactive Lua interpreter and scratchpad
 ## LoadManagers: AddonLoader

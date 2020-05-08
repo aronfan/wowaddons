@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: BugGrabber
-## Title-zhCN: |cFF0099FF[!!!]|r Bug收集器
+## Title-zhCN: |cFF0099FF[!Meta]|r Bug收集器
 ## Notes: Grabs bugs for the bug sack.
 ## Notes-deDE: Grabs bugs for the bug sack.
 ## Notes-ruRU: Grabs bugs for the bug sack.
