@@ -7,6 +7,8 @@ AuctionMaster: 拍卖大师
 
 bloodOfHeros: 瘟疫之地英雄之血
 
+BoomTime: 爆本监控
+
 BuffTimers: Buff时间精确显示
 
 BugGrabber: Bug收集器
@@ -30,6 +32,8 @@ Ex_AutoEquip: 一键换装/一键脱装/一键穿装
 FasterLooting: 超快拾取
 
 felFruiTimer: 费伍德水果
+
+GatherMate: 采集专业伴侣
 
 GearMenu: 装备条，可以按槽位来更换装备
 
