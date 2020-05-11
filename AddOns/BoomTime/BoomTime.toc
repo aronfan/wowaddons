@@ -1,0 +1,14 @@
+## Interface: 11304
+## Title: BoomTime
+## Title-zhCN: |cFF0099FF[Base]|r 爆本监控
+## Title-zhTW: |cFF0099FF[Base]|r 爆本监控
+## SavedVariablesPerCharacter: 
+## SavedVariables: boomTimeSv
+## Notes: BoomTime
+## Dependencies: 
+## OptionalDependencies: 
+## LoadOnDemand: 0
+## DefaultState: enabled
+## Version: 113r.191127
+
+BoomTime.xml
