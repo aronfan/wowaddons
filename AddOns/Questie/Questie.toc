@@ -1,6 +1,6 @@
 ## Interface: 11304
 ## Title: |cFFFFFFFFQuestie|r|cFF00FF00 v5.10.2|r
-## Title-zhCN: |cFF0099FF[Base]|r 任务导引
+## Title-zhCN: |cFF0099FF[Base]|r 任务导引 v5.10.2
 ## Author: Aero/Logon/Muehe/TheCrux(BreakBB)/Dyaxler/Schaka/Zoey/Everyone else
 ## Notes: A standalone Classic QuestHelper
 ## Notes-zhCN: 任务导引，任务数据库
