@@ -72,7 +72,9 @@ board:SetScript("OnMouseDown", function(self, button)
     if button == "LeftButton" then
         self:StartMoving();
     else
-        ALADROP(board, "BOTTOMLEFT", drop_menu_table);
+        if ALADROP ~= nil then
+            ALADROP(board, "BOTTOMLEFT", drop_menu_table);
+        end
     end
 end);
 board:SetScript("OnMouseUp", function(self, button)
