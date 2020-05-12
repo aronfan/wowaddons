@@ -59,6 +59,8 @@ Spy: 侦测敌方玩家
 
 StatusBars2: 监控你的生命/能量/连击点，以及目标/焦点/宠物的生命/能量/BUFF
 
+TellMeWhen: 事件通知
+
 WowLua: 游戏内置Lua解释器
 
 拷贝到Interface目录下即可
