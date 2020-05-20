@@ -1,0 +1,21 @@
+﻿## Interface: 11304
+## Title: BuyEmAll Classic
+## Title-zhCN: |cFF0099FF[Base]|r 批量购买
+## SavedVariablesPerCharacter: BEAConfirmToggle
+## Notes: Enhances shift-click interface at vendors.
+## LoadManagers: AddonLoader
+## X-LoadOn-Merchant: true
+## X-LoadOn-Slash: /buyemall
+## Version: 0.9.0
+
+Localization.deDE.lua
+Localization.enUS.lua
+Localization.esES.lua
+Localization.frFR.lua
+Localization.koKR.lua
+Localization.ptBR.lua
+Localization.ruRU.lua
+Localization.zhCN.lua
+Localization.zhTW.lua
+BuyEmAllClassic.lua
+BuyEmAllClassic.xml
