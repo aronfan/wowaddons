@@ -35,6 +35,8 @@ FasterLooting: 超快拾取
 
 felFruiTimer: 费伍德水果
 
+Fizzle: 装备品质和耐久
+
 GatherMate: 采集专业伴侣
 
 GearMenu: 装备条，可以按槽位来更换装备
