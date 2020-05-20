@@ -63,6 +63,8 @@ StatusBars2: 监控你的生命/能量/连击点，以及目标/焦点/宠物的
 
 TellMeWhen: 事件通知
 
+WhisperPop: 密语显示
+
 WowLua: 游戏内置Lua解释器
 
 拷贝到Interface目录下即可
