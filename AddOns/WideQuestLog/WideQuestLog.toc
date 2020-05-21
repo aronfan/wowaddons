@@ -1,0 +1,7 @@
+## Interface: 11304
+## Title: Wide Quest Log
+## Title-zhCN: |cFF0099FF[Base]|r 宽屏任务记录
+## Author: Bloodline
+## Notes: Doubles the Width of the Quest Log
+
+WideQuestLog.lua

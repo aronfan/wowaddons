@@ -67,6 +67,8 @@ TellMeWhen: 事件通知
 
 WhisperPop: 密语显示
 
+WideQuestLog: 宽屏任务日志
+
 WowLua: 游戏内置Lua解释器
 
 拷贝到Interface目录下即可
