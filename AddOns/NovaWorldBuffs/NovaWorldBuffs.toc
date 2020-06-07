@@ -1,13 +1,16 @@
 ## Interface: 11304
+## Notes: World buff timers and pre warnings.
 ## Title: Nova World Buffs
 ## Title-zhCN: |cFF0099FF[Base]|r 世界Buff监控
-## Notes: World buff timers and pre warnings.
 ## Author: Novaspark-Arugal OCE
-## Version: 1.45
+## Version: 1.61
 ## SavedVariables: NWBdatabase
 
 embeds.xml
 Locale\Locales.xml
 NovaWorldBuffs.lua
 Options.lua
+NWBData.lua
 NWBCreatures.lua
+NWBRealms.lua
+NWBGuildFilter.lua
