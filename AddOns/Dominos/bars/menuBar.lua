@@ -86,19 +86,7 @@ function MenuBar:Create(...)
 		end
 	end
 
-	local requestLayoutUpdate
-	do
-		local frame = Addon:CreateHiddenFrame('Frame')
-
-		frame:SetScript('OnUpdate', function(_, elapsed)
-			frame:Hide()
-			bar:Layout()
-		end)
-
-		requestLayoutUpdate = function()
-			frame:Show()
-		end
-	end
+	local requestLayoutUpdate = Addon:Defer(function() bar:Layout() end, 0.1)
 
 	hooksecurefunc('UpdateMicroButtons', requestLayoutUpdate)
 
@@ -269,8 +257,6 @@ end
 local function Menu_AddLayoutPanel(menu)
 	local panel = menu:NewPanel(LibStub('AceLocale-3.0'):GetLocale('Dominos-Config').Layout)
 
-	panel:NewOpacitySlider()
-	panel:NewFadeSlider()
 	panel:NewScaleSlider()
 	panel:NewPaddingSlider()
 	panel:NewSpacingSlider()
@@ -328,6 +314,7 @@ function MenuBar:CreateMenu()
 		Menu_AddLayoutPanel(menu)
 		Menu_AddDisableMenuButtonsPanel(menu)
 		menu:AddAdvancedPanel()
+		menu:AddFadingPanel()
 
 		self.menu = menu
 	end

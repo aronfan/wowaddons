@@ -72,8 +72,14 @@ function PetBar:New()
 	return PetBar.proto.New(self, 'pet')
 end
 
-function PetBar:GetShowStates()
-	return '[@pet,exists,nopossessbar]show;hide'
+if Addon:IsBuild("classic") then
+	function PetBar:GetShowStates()
+		return '[pet]show;hide'
+	end
+else
+	function PetBar:GetShowStates()
+		return '[@pet,exists,nopossessbar]show;hide'
+	end
 end
 
 function PetBar:GetDefaults()
@@ -96,7 +102,7 @@ end
 --[[ keybound support ]]--
 
 function PetBar:KEYBOUND_ENABLED()
-	self.header:SetAttribute('state-visibility', 'display')
+	self:SetAttribute('state-visibility', 'display')
 
 	for _, button in pairs(self.buttons) do
 		button:Show()

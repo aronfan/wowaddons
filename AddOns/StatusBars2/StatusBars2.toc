@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Version: 4.00.00
 ## Title: StatusBars2
 ## Title-zhCN: |cFF0099FF[Combat]|r 状态监控

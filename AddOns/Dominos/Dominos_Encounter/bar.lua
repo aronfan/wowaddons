@@ -24,8 +24,8 @@ end
 function EncounterBar:Layout()
 	local bar = self.__PlayerPowerBarAlt
 	bar:ClearAllPoints()
-	bar:SetParent(self.header)
-	bar:SetPoint('CENTER', self.header)
+	bar:SetParent(self)
+	bar:SetPoint('CENTER', self)
 
 	-- resize out of combat
 	if not InCombatLockdown() then
@@ -60,6 +60,7 @@ function EncounterBar:CreateMenu()
 
 	self:AddLayoutPanel(menu)
 	self:AddAdvancedPanel(menu)
+	menu:AddFadingPanel()
 
 	self.menu = menu
 
@@ -69,8 +70,6 @@ end
 function EncounterBar:AddLayoutPanel(menu)
 	local panel = menu:NewPanel(LibStub('AceLocale-3.0'):GetLocale('Dominos-Config').Layout)
 
-	panel.opacitySlider = panel:NewOpacitySlider()
-	panel.fadeSlider = panel:NewFadeSlider()
 	panel.scaleSlider = panel:NewScaleSlider()
 	panel.paddingSlider = panel:NewPaddingSlider()
 

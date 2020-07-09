@@ -1,8 +1,4 @@
--- This module is responsible for hiding the main menu bar and other components
--- that we don't want visible when running Dominos
-local HiddenFrame = CreateFrame("Frame", nil, UIParent)
-HiddenFrame:SetAllPoints(UIParent)
-HiddenFrame:Hide()
+local _, Addon = ...
 
 local function apply(func, arg, ...)
     if select("#", ...) > 0 then
@@ -16,7 +12,7 @@ local function hide(frame)
     if not frame then return end
 
     frame:Hide()
-    frame:SetParent(HiddenFrame)
+    frame:SetParent(Addon.ShadowUIParent)
     frame.ignoreFramePositionManager = true
 
     -- with 8.2, there's more restrictions on frame anchoring if something
@@ -93,11 +89,10 @@ end
 if ReputationWatchBar then
     ReputationWatchBar:UnregisterAllEvents()
     hide(ReputationWatchBar)
-end
-
-if KeyRingButton then
-    KeyRingButton:UnregisterAllEvents()
-    hide(KeyRingButton)
+    
+    hooksecurefunc("MainMenuBar_UpdateExperienceBars", function()
+        ReputationWatchBar:Hide()
+    end)
 end
 
 if VerticalMultiBarsContainer then
@@ -124,7 +119,7 @@ if VerticalMultiBarsContainer then
 end
 
 -- set the stock action buttons to hidden by default
-for id = 1, 12 do
+for id = 1, NUM_ACTIONBAR_BUTTONS do
     _G[('ActionButton%d'):format(id)]:SetAttribute("statehidden", true)
     _G[('MultiBarRightButton%d'):format(id)]:SetAttribute("statehidden", true)
     _G[('MultiBarLeftButton%d'):format(id)]:SetAttribute("statehidden", true)

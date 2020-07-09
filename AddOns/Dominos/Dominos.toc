@@ -1,16 +1,16 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: Dominos
-## Title-zhCN: |cFF0099FF[Base]|r Dominos动作条
 ## Notes: A main actionbar replacement
 ## Author: Tuller
-## Version: 8.3.1
+## Version: 8.3.12
+## X-Build: Classic
 ## SavedVariables: DominosDB
 ## OptionalDeps: Ace3, LibKeyBound-1.0, LibSharedMedia-3.0, Masque, FlyPaper
-
 embeds.xml
 localization.xml
 Dominos.lua
 core\helpers.lua
+core\shadowUIParent.lua
 core\frame.lua
 core\buttonBar.lua
 core\configOverlay.lua

@@ -1,5 +1,65 @@
 # Dominos Changelog
 
+8.3.12
+
+* Update classic TOCs for 1.13.5
+* Add Packet of Seeds to the reagent count list in classic
+
+8.3.11
+
+* Recoded the extra action bar frame to work more like the zone bar. The parent frame the bar should stay with the acutal bar position now
+
+8.3.10
+
+* Fixed some more errors with the mirror timers
+* Implemented an alternative way to hide the keyring button
+
+8.3.9
+
+* Fix an error when any of the mirror timers end
+* Added an option to the cast bar to hide the spark/gradient texture
+
+8.3.8
+
+* Fixed a bug causing the vehicle button to not show up when it should
+* Fixed an issue causing the castbar to sometimes get stuck on screen
+* Added contextual color option to the castbar for help/harm coloring
+
+8.3.7
+
+* Fixed a bug causing bars with a 0 opacity show state to no longer display cds
+* Fixed a bug preventing the options menu from loading in when it should
+* Dominos_Config should now load in a bit closer to when its actually needed
+* Slightly increased the frame level of Dominos bars for addon compatibility
+
+8.3.6
+
+* Linked bars now inherit fade delay and duration settings
+
+8.3.5
+
+* Add a new option to toggle the latency bar display on the cast bar
+* The latency padding option now defaults to your spell queue window
+
+8.3.4
+
+* Fix castbar directions and hopefully reduced jitter
+
+8.3.3
+
+* Fix an error on upgrade.
+
+8.3.2 - The "Jayrgo did a bunch of neat things" update
+
+* Dominos Cast now supports the mirror bars, which display out of breath, exhaustion, etc (thanks to [Jayrgo](https://github.com/Jayrgo))
+* Opacity and fade settings have been broken up in to their own menu section, with additional options for controlling fade duration (thanks to [Jayrgo](https://github.com/Jayrgo))
+* Dominos now features a new look for its main options menu, and now uses a standard interface for switching profiles.
+* Right click menu sections are now listed vertically on the left side to accomidate more options
+* Update the default position of the zone ability bar to be more like the position in the stock UI
+* Adjusted the show states for the pet bar in classic
+* Fixed an issue causing reagent counts to not show for macros in classic (thanks to [Jayrgo](https://github.com/Jayrgo))
+* Other minor internal improvements
+
 8.3.1
 
 * Add zone ability bar (shows on the right by default)

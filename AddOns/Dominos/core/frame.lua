@@ -19,7 +19,7 @@ function Frame:New(id, tooltipText)
 	frame:LoadSettings()
 	frame:SetTooltipText(tooltipText)
 
-	Addon.OverrideController:Add(frame.header)
+	Addon.OverrideController:Add(frame)
 
 	active[id] = frame
 
@@ -33,37 +33,52 @@ function Frame:OnEnable() end
 function Frame:Create(id)
 	local frameName = ('%sFrame%s'):format(AddonName, id)
 
-	local frame = self:Bind(CreateFrame('Frame', frameName, _G['UIParent']))
+	local frame = self:Bind(CreateFrame('Frame', frameName, UIParent, "SecureHandlerStateTemplate"))
 	frame:SetClampedToScreen(true)
 	frame:SetMovable(true)
 
+	-- artfically increase the frame level of the bar to account for the header
+	-- frame we no longer use
+	frame:SetFrameLevel(frame:GetFrameLevel() + 1)
+
 	frame.id = id
 
-	frame.header = CreateFrame('Frame', nil, frame, 'SecureHandlerStateTemplate')
+	frame:SetAttribute('id', id)
 
-	frame.header:SetAttribute('id', id)
-
-	frame.header:SetAttribute('_onstate-overrideui', [[
-		self:RunAttribute('updateShown')
+	frame:SetAttribute('_onstate-alpha', [[
+		self:CallMethod('FadeOut')
 	]])
 
-	frame.header:SetAttribute('_onstate-showinoverrideui', [[
-		self:RunAttribute('updateShown')
+	frame:SetAttribute('_onstate-overrideui', [[
+		self:RunAttribute('UpdateShown')
 	]])
 
-	frame.header:SetAttribute('_onstate-petbattleui', [[
-		self:RunAttribute('updateShown')
+	frame:SetAttribute('_onstate-showinoverrideui', [[
+		self:RunAttribute('UpdateShown')
 	]])
 
-	frame.header:SetAttribute('_onstate-showinpetbattleui', [[
-		self:RunAttribute('updateShown')
+	frame:SetAttribute('_onstate-petbattleui', [[
+		self:RunAttribute('UpdateShown')
 	]])
 
-	frame.header:SetAttribute('_onstate-display', [[
-		self:RunAttribute('updateShown')
+	frame:SetAttribute('_onstate-showinpetbattleui', [[
+		self:RunAttribute('UpdateShown')
 	]])
 
-	frame.header:SetAttribute('updateShown', [[
+	frame:SetAttribute('_onstate-display', [[
+		self:RunAttribute('UpdateShown')
+	]])
+
+	frame:SetAttribute("_onstate-hidden", [[
+		self:RunAttribute("UpdateShown")
+	]])
+
+	frame:SetAttribute('UpdateShown', [[
+		if self:GetAttribute("state-hidden") then
+			self:Hide()
+			return
+		end
+
 		local isOverrideUIShown = self:GetAttribute('state-overrideui') and true or false
 		local isPetBattleUIShown = self:GetAttribute('state-petbattleui') and true or false
 
@@ -82,6 +97,7 @@ function Frame:Create(id)
 			if self:GetAttribute('state-alpha') then
 				self:SetAttribute('state-alpha', nil)
 			end
+
 			self:Hide()
 			return
 		end
@@ -90,16 +106,9 @@ function Frame:Create(id)
 		if self:GetAttribute('state-alpha') ~= stateAlpha then
 			self:SetAttribute('state-alpha', stateAlpha)
 		end
+
 		self:Show()
 	]])
-
-	frame.header:SetAttribute('_onstate-alpha', [[
-		self:CallMethod('Fade')
-	]])
-
-	frame.header.Fade = function() frame:Fade() end
-
-	frame.header:SetAllPoints(frame)
 
 	frame:OnCreate()
 
@@ -126,9 +135,9 @@ function Frame:OnRestore() end
 function Frame:Free(deleteSettings)
 	active[self.id] = nil
 
-	UnregisterStateDriver(self.header, 'display', 'show')
+	UnregisterStateDriver(self, 'display', 'show')
 	Addon.MouseOverWatcher:Remove(self)
-	Addon.OverrideController:Remove(self.header)
+	Addon.OverrideController:Remove(self)
 
 	self.docked = nil
 
@@ -283,6 +292,46 @@ function Frame:GetFadeMultiplier()
 	return self.sets.fadeAlpha or 1
 end
 
+function Frame:SetFadeInDelay(delay)
+	delay = tonumber(delay) or 0
+	self.sets.fadeInDelay = delay ~= 0 and delay
+	self:UpdateWatched()
+end
+
+function Frame:GetFadeInDelay()
+	return self.sets.fadeInDelay or 0
+end
+
+function Frame:SetFadeOutDelay(delay)
+	delay = tonumber(delay) or 0
+	self.sets.fadeOutDelay = delay ~= 0 and delay
+	self:UpdateWatched()
+end
+
+function Frame:GetFadeOutDelay()
+	return self.sets.fadeOutDelay or 0
+end
+
+function Frame:SetFadeInDuration(duration)
+	duration = tonumber(duration) or 0.1
+	self.sets.fadeInDuration = duration ~= 0.1 and duration
+	self:UpdateWatched()
+end
+
+function Frame:GetFadeInDuration()
+	return self.sets.fadeInDuration or 0.1
+end
+
+function Frame:SetFadeOutDuration(duration)
+	duration = tonumber(duration) or 0.1
+	self.sets.fadeOutDuration = duration ~= 0.1 and duration
+	self:UpdateWatched()
+end
+
+function Frame:GetFadeOutDuration()
+	return self.sets.fadeOutDuration or 0.1
+end
+
 function Frame:UpdateAlpha()
 	self:SetAlpha(self:GetExpectedAlpha())
 
@@ -303,7 +352,7 @@ function Frame:GetExpectedAlpha()
 	end
 
 	--if there's a statealpha value for the frame, then use it
-	local stateAlpha = self.header:GetAttribute('state-alpha')
+	local stateAlpha = self:GetAttribute('state-alpha')
 	if stateAlpha then
 		return stateAlpha / 100
 	end
@@ -371,8 +420,8 @@ end
 function Frame:IsDockedFocus()
 	local docked = self.docked
 	if docked then
-		for _,f in pairs(docked) do
-			if f:IsFocus()  then
+		for _, frame in pairs(docked) do
+			if frame:IsFocus() then
 				return true
 			end
 		end
@@ -382,30 +431,30 @@ end
 
 --[[ Fading ]]--
 
---fades the frame from the current opacity setting
---to the expected setting
-function Frame:Fade()
-	if floor(abs(self:GetExpectedAlpha()*100 - self:GetAlpha()*100)) == 0 then
-		return
-	end
+function Frame:FadeIn()
+	self:Fade(self:GetExpectedAlpha(), self:GetFadeInDelay(), self:GetFadeInDuration())
+end
 
-	if not self:FrameIsShown() then
-		return
-	end
+function Frame:FadeOut()
+    self:Fade(self:GetExpectedAlpha(), self:GetFadeOutDelay(), self:GetFadeOutDuration())
+end
 
-	Addon:Fade(self, self:GetExpectedAlpha(), 0.1)
+function Frame:Fade(targetAlpha, delay, duration)
+	if floor(abs(targetAlpha * 100 - self:GetAlpha() * 100)) == 0 then return end
+
+	Addon:Fade(self, targetAlpha, delay, duration)
 
 	if Addon:IsLinkedOpacityEnabled() then
-		self:ForDocked('Fade')
+		self:ForDocked("Fade", targetAlpha, delay, duration)
 	end
-end
+end 
 
 --[[ Visibility ]]--
 
 function Frame:ShowFrame()
 	self.sets.hidden = nil
 
-	self:Show()
+	self:SetAttribute("state-hidden", nil)
 	self:UpdateWatched()
 	self:UpdateAlpha()
 
@@ -417,7 +466,7 @@ end
 function Frame:HideFrame()
 	self.sets.hidden = true
 
-	self:Hide()
+	self:SetAttribute("state-hidden", true)
 	self:UpdateWatched()
 	self:UpdateAlpha()
 
@@ -444,7 +493,7 @@ end
 function Frame:ShowInOverrideUI(enable)
 	self.sets.showInOverrideUI = enable and true or false
 
-	self.header:SetAttribute('state-showinoverrideui', enable)
+	self:SetAttribute('state-showinoverrideui', enable)
 end
 
 function Frame:ShowingInOverrideUI()
@@ -453,7 +502,7 @@ end
 
 function Frame:ShowInPetBattleUI(enable)
 	self.sets.showInPetBattleUI = enable and true or false
-	self.header:SetAttribute('state-showinpetbattleui', enable)
+	self:SetAttribute('state-showinpetbattleui', enable)
 end
 
 function Frame:ShowingInPetBattleUI()
@@ -500,12 +549,12 @@ function Frame:UpdateShowStates()
 	local showstates = self:GetShowStates()
 
 	if showstates and showstates ~= '' then
-		RegisterStateDriver(self.header, 'display', showstates)
+		RegisterStateDriver(self, 'display', showstates)
 	else
-		UnregisterStateDriver(self.header, 'display')
+		UnregisterStateDriver(self, 'display')
 
-		if self.header:GetAttribute('state-display') then
-			self.header:SetAttribute('state-display', nil)
+		if self:GetAttribute('state-display') then
+			self:SetAttribute('state-display', nil)
 		end
 	end
 end
@@ -654,7 +703,7 @@ function Frame:GetRelativeFramePosition()
 	local right = self:GetRight() or 0
 	local bottom = self:GetBottom() or 0
 
-	local parent = self:GetParent() or _G['UIParent']
+	local parent = self:GetParent() or UIParent
 	local pwidth = parent:GetWidth() / scale
 	local pheight = parent:GetHeight() / scale
 
@@ -736,6 +785,7 @@ function Frame:CreateMenu()
 	self.menu = Addon:NewMenu(self.id)
 	self.menu:AddLayoutPanel()
 	self.menu:AddAdvancedPanel()
+	self.menu:AddFadingPanel()
 end
 
 function Frame:ShowMenu()
@@ -787,24 +837,37 @@ function Frame:GetAll()
 	return pairs(active)
 end
 
+function Frame:CallMethod(method, ...)
+	local func = self[method]
+
+	if type(func) == "function" then
+		return func(self, ...)
+	else
+		error(("Frame %s does not have a method named %q"):format(self.id, method), 2)
+	end
+end
+
+function Frame:MaybeCallMethod(method, ...)
+	local func = self[method]
+
+	if type(func) == "function" then
+		return func(self, ...)
+	end
+end
+
 function Frame:ForAll(method, ...)
-	for _,f in self:GetAll() do
-		local action = f[method]
-		if action then
-			action(f, ...)
-		end
+	for _, frame in self:GetAll() do
+		frame:MaybeCallMethod(method, ...)
 	end
 end
 
 function Frame:ForDocked(method, ...)
-	if self.docked then
-		for _, f in pairs(self.docked) do
-			local action = f[method]
-			if action then
-				action(f, ...)
-			end
+	local docked = self.docked
+	if docked then
+		for _, frame in pairs(docked) do
+			frame:CallMethod(method, ...)
 		end
-	end
+	end	
 end
 
 --takes a frameId, and performs the specified action on that frame
@@ -827,19 +890,13 @@ function Frame:ForFrame(id, method, ...)
 			for i = startID, endID do
 				local f = self:Get(i)
 				if f then
-					local action = f[method]
-					if action then
-						action(f, ...)
-					end
+					f:MaybeCallMethod(method, ...)
 				end
 			end
 		else
 			local f = self:Get(id)
 			if f then
-				local action = f[method]
-				if action then
-					action(f, ...)
-				end
+				f:MaybeCallMethod(method, ...)
 			end
 		end
 	end
