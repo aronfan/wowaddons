@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: WhisperPop
 ## Title-zhCN: |cFF0099FF[Base]|r 密语显示
 ## X-Category: Chat/Communication

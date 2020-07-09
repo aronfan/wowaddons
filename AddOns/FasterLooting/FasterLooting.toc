@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: FasterLooting
 ## Title-zhCN: |cFF0099FF[Base]|r 超快拾取
 ## Author: cannon

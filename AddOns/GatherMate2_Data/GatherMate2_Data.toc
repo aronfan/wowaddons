@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Notes: GatherMate2 data fetched from Wowhead
 ## Title: GatherMate2Data
 ## Title-zhCN: |cFF0099FF[Gather]|r 采集助手 数据

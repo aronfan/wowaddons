@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: NugCast
 ## Title-zhCN: |cFF0099FF[Combat]|r 施法条
 ## Author: d87

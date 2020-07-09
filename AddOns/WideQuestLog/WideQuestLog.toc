@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: Wide Quest Log
 ## Title-zhCN: |cFF0099FF[Base]|r 宽屏任务记录
 ## Author: Bloodline

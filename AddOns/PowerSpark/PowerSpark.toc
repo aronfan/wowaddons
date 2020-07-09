@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: PowerSpark
 ## Notes: PowerSpark
 ## Title-zhCN: |cFF0099FF[Combat]|r 能量和法力恢复提示

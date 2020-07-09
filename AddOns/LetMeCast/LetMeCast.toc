@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: LetMeCast
 ## Notes: AutoDismount and AutoStand
 ## Title-zhCN: |cFF0099FF[Combat]|R 自动下马或站立

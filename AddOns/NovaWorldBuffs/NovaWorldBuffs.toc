@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Notes: World buff timers and pre warnings.
 ## Title: Nova World Buffs
 ## Title-zhCN: |cFF0099FF[Base]|r 世界Buff监控

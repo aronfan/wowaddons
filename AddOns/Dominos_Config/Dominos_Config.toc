@@ -1,7 +1,6 @@
 ## Interface: 11305
 ## Title: Dominos Config
-## Title-zhCN: Dominos 设置
-## Title-zhTW: Dominos 設置
+## Title-zhCN: |cFF0099FF[Base]|r Dominos设置
 ## Notes: GUI based configuration for Dominos
 ## Author: Tuller
 ## Dependencies: Dominos

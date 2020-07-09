@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: NugRunning
 ## Title-zhCN: |cFF0099FF[Combat]|r 法术计时
 ## Notes: Spelltimers

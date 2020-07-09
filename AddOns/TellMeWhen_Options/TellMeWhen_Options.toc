@@ -1,4 +1,4 @@
-﻿## Interface: 11304
+﻿## Interface: 11305
 ## Title: TellMeWhen Options
 ## Title-zhCN: |cFF0099FF[Combat]|r 事件通知配置
 

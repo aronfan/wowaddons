@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Version: v80000-1.0.0
 ## Title: WowLua
 ## Title-zhCN: |cFF0099FF[!Meta]|r 插件开发 

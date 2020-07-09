@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: bloodOfHeros
 ## Title-zhCN: |cFF0099FF[Gather]|r 英雄之血
 ## Title-zhTW: |cFF0099FF[Gather]|r 英雄之血

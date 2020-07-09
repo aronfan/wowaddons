@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: Combuctor Config
 ## Title-zhCN: |cFF0099FF[Base]|r 背包整合配置
 ## Author: Tuller and Jaliborc (João Cardoso)

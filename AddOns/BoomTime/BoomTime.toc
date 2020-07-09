@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: BoomTime
 ## Title-zhCN: |cFF0099FF[Base]|r 爆本监控
 ## Title-zhTW: |cFF0099FF[Base]|r 爆本监控

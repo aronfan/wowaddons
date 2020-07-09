@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: AuctionMaster
 ## Title-zhCN: |cFF0099FF[Base]|r 拍卖大师
 ## Notes: Auction house selling and statistic tool.

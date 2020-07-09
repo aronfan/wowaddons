@@ -1,4 +1,4 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: Fizzle
 ## Title-zhCN: |cFF0099FF[Base]|r 装备品质和耐久
 ## Notes: Show item durability and quality in the character frame.

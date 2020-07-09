@@ -1,4 +1,4 @@
-﻿## Interface: 11304
+﻿## Interface: 11305
 ## Version: 1.00.00
 ## Title: Auto Equip
 ## Title-zhCN: |cFF0099FF[Base]|r 一键换装
